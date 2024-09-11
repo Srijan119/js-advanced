@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+<title>html pahen</title>
+</head>
+
+<body>
+    
+<button class="myBtn" > click</button>
+<button class="myBtn2" > click2</button>
+
+<input  class="in" type="text">
+
+<button onclick="appenddiv()"> add div</button>
+<button onclick="remove()"> remove</button>
+
+
+
+
+
+<script>
+
+
+const fun = ()=>{
+
+    console.log("set timeout");
+}
+
+
+const fun2 = ()=>{
+
+console.log("set interval");
+}
+
+
+
+setTimeout(fun,5000);
+
+const intervalId = setInterval(fun2, 2000);
+
+
+setTimeout(()=>{
+    clearInterval(intervalId)
+    console.log('over of set interval')
+},6000);
+
+
+
+
+
+
+console.log(document.querySelector('.myBtn'));
+
+const a = document.querySelector('.myBtn2');
+
+// document.querySelector('.myBtn').onclick= function(){
+//     window.alert('ji');
+// }
+
+
+// onClick, mouseover mousedown , on dblClick, mouseout,
+
+
+const appenddiv = ()=>
+{
+var divr = document.createElement('div');
+divr.classList.add('kjh');
+divr.innerHTML = `<p>ksss</p>`
+document.body.append(divr);
+}
+
+const remove = ()=>{
+    document.querySelector('.kjh').remove();
+}
+
+
+
+
+
+document.querySelector('.myBtn').addEventListener('click', function(){
+    window.alert('jidjndm');})
+
+    a.addEventListener('mouseover',alertnew);
+    // document.querySelector('.myBtn').addEventListener('click', function(){
+    // window.alert('jidjndm');})
+
+
+
+    document.querySelector('.in').addEventListener('change', function(event){
+    window.alert(event.target.value);})
+
+
+function alertnew(){
+
+    alert('mouseover');
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>
+
+
